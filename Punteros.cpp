@@ -4,13 +4,17 @@ using namespace std;
 
 int main(){
 
-    int FArray[5] = {1, 2, 3, 4, 5};
+    int Entero = 15;
+    int *PEntero = &Entero;
+    void *PPunteroGenerico = PEntero;
 
-    int *PInteger= FArray;
-
-    std::cout << "PInteger: " << *PInteger << std::endl;
-
-    std::cout << "PInteger+3: " << *(PInteger + 3) << std::endl;
+    std::cout << "Entero " << Entero << std::endl;
+    std::cout << "*PEntero " << *PEntero << std::endl;
+    std::cout << "PEntero " << PEntero << std::endl;
+    
+    int *PInteger2 = (int *)PPunteroGenerico;
+    std::cout << "*PInteger2 " << *PInteger2 << std::endl;
 
     return 0;
 }
+
